@@ -1,0 +1,1007 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Shentox;
+  src: url("https://next.tnwcdn.com/assets/next/fonts/shentox-medium.woff2") format("woff2"), url("https://next.tnwcdn.com/assets/next/fonts/shentox-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url("https://next.tnwcdn.com/assets/next/fonts/graphik-regular.woff2") format("woff2"), url("https://next.tnwcdn.com/assets/next/fonts/graphik-regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Graphik;
+  src: url("https://next.tnwcdn.com/assets/next/fonts/graphik-medium.woff2") format("woff2"), url("https://next.tnwcdn.com/assets/next/fonts/graphik-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: TNW Avalon;
+  src: url("https://next.tnwcdn.com/assets/next/fonts/tnw-avalon-bold.woff2") format("woff2"), url("https://next.tnwcdn.com/assets/next/fonts/tnw-avalon-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Trump Soft Pro;
+  src: url("https://next.tnwcdn.com/assets/next/fonts/trump-soft-pro-bold.woff2") format("woff2"), url("https://next.tnwcdn.com/assets/next/fonts/trump-soft-pro-bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  box-shadow: 0 0 48px rgba(0, 0, 0, 0.15);
+}
+
+header > * + * {
+  padding-left: 1rem;
+}
+
+header .material-icons {
+  font-size: 2rem;
+}
+
+header svg {
+  position: relative;
+  top: 0.25rem;
+  height: 1.5rem;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font: inherit;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .tnw-title {
+  width: 40%;
+  height: auto;
+  margin: 3rem 0;
+}
+
+main .heart-of-tech {
+  text-align: center;
+  font-family: Graphik;
+  font-size: clamp(1.5rem, 50%, 10rem);
+  padding: 1.5rem 0;
+}
+
+.top-articles {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem;
+  width: 100%;
+  height: fit-content;
+}
+
+.top-articles .slider {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  height: 60%;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background-color: #fff;
+}
+
+.top-articles .slider .tnw-conference-768 {
+  display: none;
+}
+
+.top-articles .slider .article {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 90%;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  margin-right: 1rem;
+}
+
+.top-articles .slider .article img {
+  object-position: 50% 50%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin-right: 1rem;
+  overflow: none;
+}
+
+.top-articles .slider .article .article-title-container {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  color: white;
+  padding: 2em;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.9) 80%);
+}
+
+.top-articles .slider .article .article-title-container .topic {
+  font-family: Shentox;
+  font-size: clamp(1rem, 50vw, 2rem);
+  text-transform: uppercase;
+}
+
+.top-articles .slider .article .article-title-container .article-title {
+  font-family: Graphik;
+  font-weight: bold;
+  font-size: clamp(1rem, 20vw, 2rem);
+}
+
+.top-articles .tnw-conference {
+  position: relative;
+  width: 100%;
+  overflow: none;
+  padding: 0 1rem;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.9) 80%);
+}
+
+.top-articles .tnw-conference img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 0% 50%;
+  aspect-ratio: 16 / 9;
+}
+
+.top-articles .tnw-conference .conference-title-container {
+  position: absolute;
+  width: 100%;
+  font-size: clamp(1rem, 50vw, 1.5rem);
+  font-family: "TNW Avalon";
+  color: white;
+  padding: 1em;
+}
+
+.top-articles .tnw-conference .conference-title-container h4 {
+  font-size: clamp(1rem, 50vw, 1.5rem);
+  font-family: "TNW Avalon";
+  color: white;
+  padding: 1em;
+}
+
+.top-articles .tnw-conference .conference-title-container button {
+  border: 2px solid white;
+  padding: 0.5em;
+  border-radius: 3000px;
+  width: 90%;
+  color: white;
+  background-color: transparent;
+  font-family: Graphik;
+  text-transform: uppercase;
+  margin: 1em;
+  font-weight: bold;
+}
+
+.top-articles .tnw-conference .conference-title-container button:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .top-articles {
+    width: 100%;
+    align-items: center;
+    margin: 2rem;
+    padding: 2rem;
+    overflow: hidden;
+  }
+  .top-articles .slider {
+    display: grid;
+    grid-area: slider;
+    grid-gap: 1rem;
+    grid-template-areas: "main main" "main main" "second conf" "third fourth";
+    overflow: hidden;
+  }
+  .top-articles .slider .article {
+    aspect-ratio: 16 / 9;
+    padding: 0;
+    margin: 0;
+    place-self: center;
+    width: 100%;
+  }
+  .top-articles .slider .article .topic {
+    font-size: 1.5rem !important;
+  }
+  .top-articles .slider .article .article-title {
+    font-size: 1.5rem !important;
+  }
+  .top-articles .slider .article img {
+    padding: 0;
+  }
+  .top-articles .slider .article:nth-of-type(1) {
+    grid-area: main;
+    place-self: center;
+  }
+  .top-articles .slider .article:nth-of-type(2) {
+    grid-area: second;
+  }
+  .top-articles .slider .article:nth-of-type(3) {
+    grid-area: fourth;
+  }
+  .top-articles .slider .article:nth-of-type(4) {
+    grid-area: third;
+  }
+  .top-articles .slider .tnw-conference-768 {
+    display: block;
+    grid-area: conf;
+    position: relative;
+    width: 100%;
+    overflow: none;
+    text-align: center;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.9) 80%);
+  }
+  .top-articles .slider .tnw-conference-768 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0% 50%;
+    aspect-ratio: 16 / 9;
+  }
+  .top-articles .slider .tnw-conference-768 .conference-title-container {
+    position: absolute;
+    width: 100%;
+    font-size: clamp(1rem, 50vw, 1.5rem);
+    font-family: "TNW Avalon";
+    color: white;
+    padding: 1em;
+  }
+  .top-articles .slider .tnw-conference-768 .conference-title-container h4 {
+    font-size: 1.5rem !important;
+    font-family: "TNW Avalon";
+    color: white;
+    padding: 0.5em;
+  }
+  .top-articles .slider .tnw-conference-768 .conference-title-container button {
+    border: 2px solid white;
+    padding: 0.25em;
+    border-radius: 3000px;
+    width: 70%;
+    color: white;
+    background-color: transparent;
+    font-family: Graphik;
+    text-transform: uppercase;
+    margin: 0.5em;
+    font-weight: bold;
+  }
+  .top-articles .slider .tnw-conference-768 .conference-title-container button:hover {
+    cursor: pointer;
+  }
+  .top-articles .tnw-conference {
+    display: none;
+  }
+}
+
+.popular-articles-today {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  align-items: center;
+  font-family: "Trump Soft Pro";
+  width: 100%;
+  counter-reset: pop-article;
+  background-color: #f7f9f8;
+}
+
+.popular-articles-today h2 {
+  text-transform: uppercase;
+  color: #505666;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.popular-articles-today .pop-article {
+  text-align-last: left;
+  align-self: flex-start;
+  font-size: 2rem;
+  position: relative;
+  padding-left: 2rem;
+  margin: 1rem 0;
+}
+
+.popular-articles-today .pop-article::before {
+  position: absolute;
+  left: 0;
+  counter-increment: pop-article;
+  content: counter(pop-article);
+  color: #ff42a1;
+  padding-right: 1rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .popular-articles-today {
+    padding: 3rem 7rem;
+  }
+}
+
+.latest-stories {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  align-items: center;
+  height: 100%;
+  font-family: "TNW Avalon";
+}
+
+.latest-stories h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.latest-stories .story {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0;
+  height: 100%;
+  width: 100%;
+}
+
+.latest-stories .story .circle {
+  background-color: #777;
+  justify-self: flex-start;
+  border-radius: 50%;
+  margin-right: 2rem;
+  width: clamp(5rem, 30%, 10rem);
+  height: clamp(5rem, 30%, 10rem);
+  aspect-ratio: 1 / 1;
+}
+
+.latest-stories .story .story-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+  width: 70%;
+  align-self: flex-start;
+}
+
+.latest-stories .story .story-info h3 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+.latest-stories .story .story-info p {
+  font-size: 0.9rem;
+  color: #999;
+  text-align: left;
+  padding-top: 1rem;
+}
+
+.latest-stories .all-news {
+  width: 100%;
+  position: relative;
+}
+
+.latest-stories .all-news button {
+  border: none;
+  border-radius: 3000px;
+  color: white;
+  background-color: #00cccc;
+  text-align: center;
+  height: 4rem;
+  margin-top: 2rem;
+  width: 100%;
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: Graphik;
+}
+
+.latest-stories .all-news button:hover {
+  cursor: pointer;
+}
+
+.latest-stories .all-news button::after {
+  content: "›";
+  position: absolute;
+  right: 2rem;
+  top: 0.75rem;
+  font-size: 5rem;
+}
+
+@media (min-width: 768px) {
+  .latest-stories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .latest-stories h2 {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4rem;
+  }
+  .latest-stories .story {
+    width: 45%;
+    flex-direction: column;
+    border-radius: 0;
+    margin: 0;
+  }
+  .latest-stories .story .circle {
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 1rem;
+  }
+  .latest-stories .all-news {
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.explore-our-channels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "TNW Avalon";
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #f7f9f8;
+}
+
+.explore-our-channels h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.explore-our-channels .slider {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  height: 60%;
+  margin-bottom: 0.25rem;
+  width: 100%;
+  padding: 2rem;
+  margin: 3rem 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.explore-our-channels .slider .channel {
+  position: relative;
+  aspect-ratio: 216 / 256;
+  height: 30rem;
+  width: clamp(13rem, 90vw, 30rem);
+  overflow-x: auto;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-our-channels .slider .channel .image-bg {
+  object-position: 50% 50%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  padding-right: 1rem;
+  overflow: hidden;
+}
+
+.explore-our-channels .slider .channel .image-title {
+  position: absolute;
+  top: 2rem;
+  width: 70%;
+}
+
+.explore-our-channels .slider .channel h4 {
+  position: absolute;
+  bottom: 2rem;
+  font-family: Graphik;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.snarkiest-newsletter {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://next.tnwcdn.com/assets/next/img/spacesbg.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-attachment: fixed;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  font-family: "TNW Avalon";
+}
+
+.snarkiest-newsletter > * {
+  margin: 1rem 0;
+}
+
+.snarkiest-newsletter > h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.snarkiest-newsletter > p {
+  color: white;
+}
+
+.snarkiest-newsletter > p span {
+  color: #00cccc;
+}
+
+.snarkiest-newsletter > p span:first-of-type {
+  text-transform: capitalize;
+}
+
+.snarkiest-newsletter > .email-subscribe-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.snarkiest-newsletter > .email-subscribe-container input {
+  padding: 1rem 2rem;
+  color: #505666;
+  border-radius: 5px;
+  width: clamp(10rem, 90%, 50rem);
+}
+
+.snarkiest-newsletter > .email-subscribe-container input::placeholder {
+  color: #80889c;
+}
+
+.snarkiest-newsletter > .social-media-icons {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.snarkiest-newsletter > .social-media-icons > *:hover {
+  cursor: pointer;
+}
+
+.snarkiest-newsletter > .social-media-icons li svg {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%);
+  opacity: 50%;
+  transform: scale(clamp(1, 2, 3));
+  margin: 1rem;
+}
+
+.what-we-made {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5rem 0;
+  align-items: center;
+  font-family: "TNW Avalon";
+  background-color: #f7f9f8;
+}
+
+.what-we-made .player-container {
+  width: 100%;
+}
+
+.what-we-made h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.what-we-made iframe {
+  width: clamp(20rem, 100%, 150rem);
+  aspect-ratio: 16 / 9;
+}
+
+.what-we-made .yt-video-desc {
+  border-top: 1px solid #505666;
+  background-color: #000;
+  width: clamp(20rem, 100%, 150rem);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding: 3em;
+  margin-bottom: 2rem;
+  font-family: Graphik;
+}
+
+.what-we-made .yt-video-desc h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+
+.what-we-made .yt-video-desc p {
+  color: #505666;
+}
+
+.what-we-made .carousel-container {
+  position: relative;
+  width: clamp(20rem, 100%, 100rem);
+  height: 20rem;
+}
+
+.what-we-made .carousel-container .scroller-fade {
+  display: none;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), #f7f8f8);
+}
+
+.what-we-made .carousel-container .carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.what-we-made .carousel-container .carousel .slide {
+  position: relative;
+  width: 20rem;
+  margin: 1rem;
+  aspect-ratio: 3 / 2;
+}
+
+.what-we-made .carousel-container .carousel .slide img {
+  position: absolute;
+  top: 0;
+  height: 60%;
+  width: 100%;
+}
+
+.what-we-made .carousel-container .carousel .slide h4 {
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 100%;
+  font-family: Graphik;
+  color: black;
+  background-color: #f7f9f8;
+  border: none;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 1rem;
+  line-height: 1.5em;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .what-we-made {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5rem;
+  }
+  .what-we-made h2 {
+    width: 100%;
+  }
+  .what-we-made .player-container {
+    width: 60%;
+    height: 25rem;
+    padding-right: 2rem;
+  }
+  .what-we-made .player-container .yt-video-desc {
+    padding: 2rem 1rem;
+  }
+  .what-we-made .carousel-container {
+    width: 40%;
+    height: 25rem;
+    box-shadow: inset;
+  }
+  .what-we-made .carousel-container .scroller-fade {
+    display: block;
+  }
+  .what-we-made .carousel-container .carousel {
+    flex-direction: column;
+  }
+}
+
+.work-with-us {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.work-with-us h3 {
+  font-family: Shentox;
+  color: #505666;
+  text-transform: uppercase;
+  width: 50%;
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.work-with-us h2 {
+  text-align: center;
+  display: block;
+  font-family: "TNW Avalon";
+  font-weight: bold;
+  font-size: 3rem;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.work-with-us p {
+  font-family: Graphik;
+  font-size: 2rem;
+}
+
+.work-with-us button {
+  font-family: Graphik;
+  color: white;
+  background-color: #00cccc;
+  padding: 2rem;
+  width: clamp(15rem, 30vw, 30rem);
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+.work-with-us .grid-icons {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.work-with-us .grid-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 1rem 5rem;
+}
+
+.work-with-us .grid-icon img {
+  width: clamp(2rem, 20vw, 20rem);
+  height: auto;
+}
+
+.work-with-us .grid-icon .description {
+  align-self: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.work-with-us .companies {
+  width: 100%;
+  padding: 5rem;
+}
+
+.work-with-us .companies ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-with-us .companies ul > li {
+  width: clamp(5rem, 20vw, 20rem);
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .work-with-us {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .work-with-us .reach-your-goals,
+  .work-with-us .grid-icons {
+    width: 50%;
+  }
+  .work-with-us .reach-your-goals,
+  .work-with-us h3,
+  .work-with-us h2 {
+    text-align: left;
+    margin: 0 !important;
+    padding-bottom: 1rem;
+  }
+  .work-with-us h2,
+  .work-with-us h3 {
+    width: 100%;
+  }
+  .work-with-us h2 {
+    font-size: 3.5rem;
+  }
+  .work-with-us button {
+    padding: 1rem;
+  }
+}
+
+footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  font-family: "Graphik";
+  padding: 5rem 0;
+  width: 100%;
+}
+
+footer img {
+  padding: 0 2rem 2rem 2rem;
+  width: clamp(20rem, 25%, 30rem);
+}
+
+footer h2 {
+  font-size: 2rem;
+  color: white;
+  padding: 0 2rem 4rem 2rem;
+}
+
+footer .social-media-icons {
+  width: 100%;
+  align-self: flex-start;
+  justify-content: flex-start !important;
+  padding: 0 2em;
+}
+
+footer .links {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 2rem;
+}
+
+footer .links .more-tnw,
+footer .links .about-tnw {
+  width: 100%;
+}
+
+footer .links ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+footer .links ul > li {
+  color: #00cccc;
+  padding: 0.5rem 0;
+  font-family: Graphik;
+}
+
+footer .links ul > li:first-child {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Trump Soft Pro";
+}
+
+footer .copyright {
+  color: #9da3b2;
+  padding: 3rem;
+  border-top: 1px solid #505666;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+footer .copyright span {
+  color: white;
+  font-weight: bold;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.carousel-container .carousel {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container .carousel .slide {
+  aspect-ratio: 1 / 1;
+  overflow-x: auto;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+}
+
+.carousel-container .carousel .slide img {
+  object-position: 50% 50%;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+  width: 100%;
+}
+
+.social-media-icons > *:hover {
+  cursor: pointer;
+}
+
+.social-media-icons li svg {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 2rem;
+  width: 2rem;
+  height: 2rem;
+  filter: invert(100%);
+  opacity: 50%;
+  transform: scale(clamp(1, 2, 3));
+  margin: 1rem;
+}

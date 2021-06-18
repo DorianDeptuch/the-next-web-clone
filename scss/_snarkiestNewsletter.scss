@@ -1,0 +1,95 @@
+.snarkiest-newsletter {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  background-image: url(https://next.tnwcdn.com/assets/next/img/spacesbg.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-attachment: fixed;
+  width: 100%;
+  height: fit-content;
+  align-items: center;
+  font-family: "TNW Avalon";
+
+  & > * {
+    margin: 1rem 0;
+  }
+
+  & > h2 {
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  & > p {
+    color: white;
+
+    span {
+      color: $aqua;
+
+      &:first-of-type {
+        text-transform: capitalize;
+      }
+    }
+  }
+
+  & > .email-subscribe-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    // span {
+    //   position: absolute;
+    //   left: 2rem;
+    //   color: $font-color;
+    //   opacity: 50%;
+    // }
+
+    input {
+      padding: 1rem 2rem;
+      color: $font-color;
+      border-radius: 5px;
+      width: clamp(10rem, 90%, 50rem);
+
+      &::placeholder {
+        color: lighten($font-color, 20%);
+      }
+    }
+
+    // p {
+    //   position: absolute;
+    //   right: 2rem;
+    //   color: darken($font-color, 20%);
+    //   text-transform: uppercase;
+    // }
+  }
+
+  & > .social-media-icons {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    width: 100%;
+
+    & > *:hover {
+      cursor: pointer;
+    }
+
+    li {
+      svg {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        filter: invert(100%);
+        opacity: 50%;
+        transform: scale(clamp(1, 2, 3));
+        margin: 1rem;
+      }
+    }
+  }
+}

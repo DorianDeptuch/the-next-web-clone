@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .tnw-title {
+    width: 40%;
+    height: auto;
+    margin: 3rem 0;
+  }
+
+  .heart-of-tech {
+    text-align: center;
+    font-family: Graphik;
+    font-size: clamp(1.5rem, 50%, 10rem);
+    padding: 1.5rem 0;
+  }
+}

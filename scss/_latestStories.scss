@@ -1,0 +1,121 @@
+.latest-stories {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  align-items: center;
+  height: 100%;
+  font-family: "TNW Avalon";
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+  }
+
+  .story {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+
+    .circle {
+      background-color: #777;
+      justify-self: flex-start;
+      border-radius: 50%;
+      margin-right: 2rem;
+      width: clamp(5rem, 30%, 10rem);
+      // height: auto;
+      height: clamp(5rem, 30%, 10rem);
+
+      aspect-ratio: 1 / 1;
+      // object-position: center;
+      // object-fit: contain;
+    }
+
+    .story-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5em;
+      width: 70%;
+      align-self: flex-start;
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.5em;
+      }
+      p {
+        font-size: 0.9rem;
+        color: #999;
+        text-align: left;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  .all-news {
+    width: 100%;
+    position: relative;
+
+    button {
+      border: none;
+      border-radius: 3000px;
+      color: white;
+      background-color: $aqua;
+      text-align: center;
+      height: 4rem;
+      margin-top: 2rem;
+      width: 100%;
+      font-size: 2.5rem;
+      padding: 0.5rem 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-family: Graphik;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &::after {
+        content: "›";
+        position: absolute;
+        right: 2rem;
+        top: 0.75rem;
+        font-size: 5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .latest-stories {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    h2 {
+      width: 100%;
+      text-align: center;
+      padding-bottom: 4rem;
+    }
+    .story {
+      width: 45%;
+      flex-direction: column;
+      border-radius: 0;
+      margin: 0;
+
+      .circle {
+        border-radius: 0;
+        margin: 0;
+        // height: 50%;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin-bottom: 1rem;
+      }
+    }
+    .all-news {
+      width: 40%;
+      margin: 0 auto;
+    }
+  }
+}

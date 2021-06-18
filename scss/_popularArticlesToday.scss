@@ -1,0 +1,42 @@
+.popular-articles-today {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  align-items: center;
+  font-family: "Trump Soft Pro";
+  width: 100%;
+  counter-reset: pop-article;
+  background-color: $site-background;
+
+  h2 {
+    text-transform: uppercase;
+    color: $font-color;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .pop-article {
+    text-align-last: left;
+    align-self: flex-start;
+    font-size: 2rem;
+    position: relative;
+    padding-left: 2rem;
+    margin: 1rem 0;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      counter-increment: pop-article;
+      content: counter(pop-article);
+      color: rgb(255, 66, 161);
+      padding-right: 1rem;
+      font-size: 3rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .popular-articles-today {
+    padding: 3rem 7rem;
+  }
+}

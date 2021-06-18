@@ -1,0 +1,130 @@
+.work-with-us {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 2rem;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+
+  h3 {
+    font-family: Shentox;
+    color: $font-color;
+    text-transform: uppercase;
+    width: 50%;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-align: center;
+    display: block;
+    font-family: "TNW Avalon";
+    font-weight: bold;
+    font-size: 3rem;
+    width: 50%;
+    margin: 0 auto;
+    // margin-bottom: 2rem;
+  }
+
+  p {
+    font-family: Graphik;
+    font-size: 2rem;
+  }
+
+  button {
+    font-family: Graphik;
+    color: white;
+    background-color: $aqua;
+    padding: 2rem;
+    width: clamp(15rem, 30vw, 30rem);
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+
+  .grid-icons {
+    display: flex;
+    // grid-template-columns: repeat(auto-fill, 50%);
+    flex-flow: row wrap;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 4rem;
+  }
+
+  .grid-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // width: 40%;
+    // max-width: 5rem;
+    width: 50%;
+    padding: 1rem 5rem;
+
+    img {
+      // width: (2rem, 50%, 10rem);
+      width: clamp(2rem, 20vw, 20rem);
+      height: auto;
+    }
+
+    .description {
+      align-self: center;
+      padding: 1rem;
+      font-weight: bold;
+    }
+  }
+
+  .companies {
+    width: 100%;
+    padding: 5rem;
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      list-style-type: none;
+      align-items: center;
+      justify-content: center;
+
+      & > li {
+        width: clamp(5rem, 20vw, 20rem);
+        height: auto;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .work-with-us {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .reach-your-goals,
+    .grid-icons {
+      width: 50%;
+    }
+
+    .reach-your-goals,
+    h3,
+    h2 {
+      text-align: left;
+      margin: 0 !important;
+      padding-bottom: 1rem;
+    }
+
+    h2,
+    h3 {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    button {
+      padding: 1rem;
+    }
+  }
+}

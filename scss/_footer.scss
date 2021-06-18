@@ -1,0 +1,73 @@
+footer {
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  font-family: "Graphik";
+  padding: 5rem 0;
+  width: 100%;
+
+  img {
+    padding: 0 2rem 2rem 2rem;
+    width: clamp(20rem, 25%, 30rem);
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: white;
+    padding: 0 2rem 4rem 2rem;
+  }
+
+  .social-media-icons {
+    width: 100%;
+    align-self: flex-start;
+    justify-content: flex-start !important;
+
+    padding: 0 2em;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2rem;
+
+    .more-tnw,
+    .about-tnw {
+      width: 100%;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+
+      & > li {
+        color: $aqua;
+        padding: 0.5rem 0;
+        font-family: Graphik;
+
+        &:first-child {
+          color: white;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 2rem;
+          font-family: "Trump Soft Pro";
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: lighten($font-color, 30%);
+    padding: 3rem;
+    border-top: 1px solid $font-color;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5em;
+
+    span {
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
