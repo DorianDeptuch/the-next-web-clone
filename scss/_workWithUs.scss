@@ -43,6 +43,10 @@
     text-transform: uppercase;
     margin-top: 4rem;
     font-size: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .grid-icons {
@@ -63,6 +67,10 @@
     // max-width: 5rem;
     width: 50%;
     padding: 1rem 5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
 
     img {
       // width: (2rem, 50%, 10rem);
@@ -91,6 +99,10 @@
       & > li {
         width: clamp(5rem, 20vw, 20rem);
         height: auto;
+
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -125,6 +137,18 @@
 
     button {
       padding: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-with-us {
+    .companies {
+      flex-wrap: nowrap;
+
+      ul > li {
+        width: 12%;
+      }
     }
   }
 }

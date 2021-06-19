@@ -28,6 +28,10 @@
     span {
       color: $aqua;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       &:first-of-type {
         text-transform: capitalize;
       }
@@ -42,13 +46,6 @@
     justify-content: center;
     align-items: center;
 
-    // span {
-    //   position: absolute;
-    //   left: 2rem;
-    //   color: $font-color;
-    //   opacity: 50%;
-    // }
-
     input {
       padding: 1rem 2rem;
       color: $font-color;
@@ -59,13 +56,6 @@
         color: lighten($font-color, 20%);
       }
     }
-
-    // p {
-    //   position: absolute;
-    //   right: 2rem;
-    //   color: darken($font-color, 20%);
-    //   text-transform: uppercase;
-    // }
   }
 
   & > .social-media-icons {
@@ -90,6 +80,17 @@
         transform: scale(clamp(1, 2, 3));
         margin: 1rem;
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .snarkiest-newsletter {
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-weight: 400;
     }
   }
 }

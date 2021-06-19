@@ -54,6 +54,11 @@ header > * + * {
   padding-left: 1rem;
 }
 
+header nav,
+header .mail {
+  display: none;
+}
+
 header .material-icons {
   font-size: 2rem;
 }
@@ -61,7 +66,56 @@ header .material-icons {
 header svg {
   position: relative;
   top: 0.25rem;
+  color: #505666;
   height: 1.5rem;
+}
+
+header svg:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .apps {
+    display: none;
+  }
+  header nav {
+    display: block;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    font-family: Shentox;
+    list-style-type: none;
+    color: #0d0e10;
+  }
+  header nav ul li {
+    align-self: center;
+    padding: 1rem;
+    text-transform: uppercase;
+  }
+  header nav ul li:hover {
+    cursor: pointer;
+  }
+  header nav ul .chevron {
+    transform: translateY(-0.5rem);
+  }
+  header nav ul .chevron span {
+    transform: translateY(0.5rem);
+  }
+  header nav ul span {
+    padding: 0 1rem;
+  }
+  header .mail {
+    display: block;
+    color: #a0b7ac;
+  }
+  header .mail:hover {
+    cursor: pointer;
+  }
 }
 
 *,
@@ -93,6 +147,24 @@ main .heart-of-tech {
   font-family: Graphik;
   font-size: clamp(1.5rem, 50%, 10rem);
   padding: 1.5rem 0;
+}
+
+@media (min-width: 1024px) {
+  .tnw-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100% !important;
+    padding-top: 4rem;
+  }
+  .tnw-title svg,
+  .tnw-title p {
+    width: 20%;
+    padding: 0;
+  }
+  .tnw-title .heart-of-tech {
+    font-size: 2rem;
+  }
 }
 
 .top-articles {
@@ -129,6 +201,10 @@ main .heart-of-tech {
   scroll-snap-align: center;
   flex-shrink: 0;
   margin-right: 1rem;
+}
+
+.top-articles .slider .article:hover {
+  cursor: pointer;
 }
 
 .top-articles .slider .article img {
@@ -177,6 +253,10 @@ main .heart-of-tech {
   justify-content: center;
   align-items: center;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.9) 80%);
+}
+
+.top-articles .tnw-conference:hover {
+  cursor: pointer;
 }
 
 .top-articles .tnw-conference img {
@@ -278,6 +358,9 @@ main .heart-of-tech {
     align-items: center;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.9) 80%);
   }
+  .top-articles .slider .tnw-conference-768:hover {
+    cursor: pointer;
+  }
   .top-articles .slider .tnw-conference-768 img {
     width: 100%;
     height: auto;
@@ -319,6 +402,64 @@ main .heart-of-tech {
   }
 }
 
+@media (min-width: 1024px) {
+  .top-articles .slider {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 240px 120px 240px;
+  }
+  .top-articles .slider .article .article-title-container .topic {
+    font-size: 1rem !important;
+  }
+  .top-articles .slider .spotify-g-item {
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 3 !important;
+    transform: scaleY(1.2);
+  }
+  .top-articles .slider .spotify-g-item .article-title {
+    font-size: 2rem;
+  }
+  .top-articles .slider .space-g-item {
+    grid-column-start: 3 !important;
+    grid-column-end: 4 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 2 !important;
+    aspect-ratio: 1 / 1;
+    transform: translateY(1rem) scaleY(0.9);
+  }
+  .top-articles .slider .tnw-conference-768 {
+    grid-column-start: 1 !important;
+    grid-column-end: 3 !important;
+    grid-row-start: 3 !important;
+    grid-row-end: 4 !important;
+    transform: scaleY(0.8);
+  }
+  .top-articles .slider .tnw-conference-768 .conference-title-container button {
+    font-weight: 400;
+    width: 35%;
+  }
+  .top-articles .slider .video-g-item {
+    grid-column-start: 4 !important;
+    grid-column-end: 5 !important;
+    grid-row-start: 1 !important;
+    grid-row-end: 2 !important;
+    aspect-ratio: 1 / 1;
+    transform: translateY(1rem) scaleY(0.9);
+  }
+  .top-articles .slider .plugged-g-item {
+    grid-column-start: 3 !important;
+    grid-column-end: 5 !important;
+    grid-row-start: 2 !important;
+    grid-row-end: 4 !important;
+    align-self: end;
+    transform: translateY(2.5rem) scaleY(1.1);
+  }
+  .top-articles .slider .plugged-g-item .article-title {
+    font-size: 2rem !important;
+  }
+}
+
 .popular-articles-today {
   display: flex;
   flex-direction: column;
@@ -346,6 +487,10 @@ main .heart-of-tech {
   margin: 1rem 0;
 }
 
+.popular-articles-today .pop-article:hover {
+  cursor: pointer;
+}
+
 .popular-articles-today .pop-article::before {
   position: absolute;
   left: 0;
@@ -359,6 +504,24 @@ main .heart-of-tech {
 @media (min-width: 768px) {
   .popular-articles-today {
     padding: 3rem 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popular-articles-today {
+    padding: 7rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .popular-articles-today h2 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  .popular-articles-today .pop-article {
+    width: 15%;
+    margin: 0 1rem;
   }
 }
 
@@ -453,6 +616,7 @@ main .heart-of-tech {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: flex-start;
   }
   .latest-stories h2 {
     width: 100%;
@@ -460,10 +624,19 @@ main .heart-of-tech {
     padding-bottom: 4rem;
   }
   .latest-stories .story {
+    position: relative;
     width: 45%;
     flex-direction: column;
     border-radius: 0;
     margin: 0;
+    padding: 0;
+  }
+  .latest-stories .story:hover {
+    cursor: pointer;
+  }
+  .latest-stories .story img {
+    position: relative;
+    top: 0;
   }
   .latest-stories .story .circle {
     border-radius: 0;
@@ -471,10 +644,30 @@ main .heart-of-tech {
     width: 100%;
     aspect-ratio: 16 / 9;
     margin-bottom: 1rem;
+    padding-top: 0;
   }
   .latest-stories .all-news {
     width: 40%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .latest-stories {
+    justify-content: center;
+  }
+  .latest-stories .story {
+    width: 20%;
+  }
+  .latest-stories .story .story-info h3 {
+    font-size: 1rem;
+  }
+  .latest-stories .all-news {
+    width: 20%;
+    margin: 0 auto;
+  }
+  .latest-stories .all-news button {
+    font-size: 1.5rem;
   }
 }
 
@@ -522,6 +715,10 @@ main .heart-of-tech {
   justify-content: center;
 }
 
+.explore-our-channels .slider .channel:hover {
+  cursor: pointer;
+}
+
 .explore-our-channels .slider .channel .image-bg {
   object-position: 50% 50%;
   object-fit: cover;
@@ -546,6 +743,26 @@ main .heart-of-tech {
   font-weight: bold;
   text-align: center;
   padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .explore-our-channels {
+    width: 100%;
+  }
+  .explore-our-channels .slider {
+    overflow: hidden;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .explore-our-channels .slider .channel {
+    width: 19%;
+    height: 17rem;
+  }
+  .explore-our-channels .slider .channel h4 {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 500;
+  }
 }
 
 .snarkiest-newsletter {
@@ -579,6 +796,10 @@ main .heart-of-tech {
 
 .snarkiest-newsletter > p span {
   color: #00cccc;
+}
+
+.snarkiest-newsletter > p span:hover {
+  cursor: pointer;
 }
 
 .snarkiest-newsletter > p span:first-of-type {
@@ -626,6 +847,15 @@ main .heart-of-tech {
   opacity: 50%;
   transform: scale(clamp(1, 2, 3));
   margin: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .snarkiest-newsletter h2 {
+    font-size: 3rem;
+  }
+  .snarkiest-newsletter p {
+    font-weight: 400;
+  }
 }
 
 .what-we-made {
@@ -706,6 +936,10 @@ main .heart-of-tech {
   aspect-ratio: 3 / 2;
 }
 
+.what-we-made .carousel-container .carousel .slide:hover {
+  cursor: pointer;
+}
+
 .what-we-made .carousel-container .carousel .slide img {
   position: absolute;
   top: 0;
@@ -739,7 +973,7 @@ main .heart-of-tech {
     width: 100%;
   }
   .what-we-made .player-container {
-    width: 60%;
+    width: 75%;
     height: 25rem;
     padding-right: 2rem;
   }
@@ -747,15 +981,43 @@ main .heart-of-tech {
     padding: 2rem 1rem;
   }
   .what-we-made .carousel-container {
-    width: 40%;
-    height: 25rem;
-    box-shadow: inset;
+    width: 25%;
+    height: clamp(25rem, 30vh, 30rem);
   }
   .what-we-made .carousel-container .scroller-fade {
     display: block;
   }
   .what-we-made .carousel-container .carousel {
     flex-direction: column;
+    width: 100%;
+  }
+  .what-we-made .carousel-container .carousel .slide {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .what-we-made h2 {
+    font-size: 3rem;
+    text-align-last: left;
+    padding-bottom: 1rem;
+  }
+  .what-we-made .carousel-container {
+    width: 25%;
+    height: 40rem;
+    transform: translateY(8rem);
+  }
+  .what-we-made .carousel-container .scroller-fade {
+    display: block;
+  }
+  .what-we-made .carousel-container .carousel {
+    flex-direction: column;
+    width: 100%;
+  }
+  .what-we-made .carousel-container .carousel .slide {
+    width: 100%;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -806,6 +1068,10 @@ main .heart-of-tech {
   font-size: 2rem;
 }
 
+.work-with-us button:hover {
+  cursor: pointer;
+}
+
 .work-with-us .grid-icons {
   display: flex;
   flex-flow: row wrap;
@@ -821,6 +1087,10 @@ main .heart-of-tech {
   justify-content: center;
   width: 50%;
   padding: 1rem 5rem;
+}
+
+.work-with-us .grid-icon:hover {
+  cursor: pointer;
 }
 
 .work-with-us .grid-icon img {
@@ -852,6 +1122,10 @@ main .heart-of-tech {
   height: auto;
 }
 
+.work-with-us .companies ul > li:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 768px) {
   .work-with-us {
     flex-direction: row;
@@ -877,6 +1151,15 @@ main .heart-of-tech {
   }
   .work-with-us button {
     padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-with-us .companies {
+    flex-wrap: nowrap;
+  }
+  .work-with-us .companies ul > li {
+    width: 12%;
   }
 }
 
@@ -931,6 +1214,10 @@ footer .links ul > li {
   font-family: Graphik;
 }
 
+footer .links ul > li:hover {
+  cursor: pointer;
+}
+
 footer .links ul > li:first-child {
   color: white;
   font-weight: bold;
@@ -951,6 +1238,29 @@ footer .copyright {
 footer .copyright span {
   color: white;
   font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    position: relative;
+    flex-wrap: wrap;
+  }
+  footer img {
+    height: 20%;
+  }
+  footer h2 {
+    height: 60%;
+    padding-bottom: 10rem;
+  }
+  footer .social-media-icons {
+    height: 20%;
+  }
+  footer .links {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    width: 50%;
+  }
 }
 
 .carousel-container {

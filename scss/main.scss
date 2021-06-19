@@ -1,6 +1,6 @@
 @import "fonts";
-@import "header";
 @import "config";
+@import "header";
 @import "resets";
 @import "mainContent";
 @import "topArticles";
@@ -57,6 +57,7 @@
 //     width: 2rem;
 //   }
 // }
+
 .social-media-icons {
   display: flex;
   flex-direction: row;

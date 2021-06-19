@@ -39,6 +39,10 @@
       align-items: center;
       justify-content: center;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       .image-bg {
         object-position: 50% 50%;
         object-fit: cover;
@@ -63,6 +67,29 @@
         font-weight: bold;
         text-align: center;
         padding: 0 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .explore-our-channels {
+    width: 100%;
+
+    .slider {
+      overflow: hidden;
+      width: 100%;
+      padding: 0 2rem;
+
+      .channel {
+        width: 19%;
+        height: 17rem;
+
+        h4 {
+          font-size: 1rem;
+          line-height: 1.5em;
+          font-weight: 500;
+        }
       }
     }
   }

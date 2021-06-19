@@ -9,17 +9,27 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/css/main.css" />
-    <!-- <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" /> -->
     <title>The Next Web Clone</title>
   </head>
   <body>
     <header>
-      <span class="material-icons"> apps </span>
+      <span class="material-icons apps"> apps </span>
       <svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 66 16">
         <path
           d="M32.23993 5A6.00284 6.00284 0 0 1 34 9.24261V16h-6v-5.929a2.00249 2.00249 0 0 0-.58856-1.41424l-2.07239-2.07101A2.00315 2.00315 0 0 0 23.92346 6H22v10h-6V0h8.75189a6 6 0 0 1 4.24268 1.75739zM60 0v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 55.9234 10h-2.88214A5.99166 5.99166 0 0 0 54 6.75732V0h-6v5.929a2.00245 2.00245 0 0 1-.58856 1.41418l-2.07385 2.071A1.99969 1.99969 0 0 1 43.9234 10H42V0h-6v16h8.75189a6.003 6.003 0 0 0 4.244-1.75739L51 12.23938V16h5.75189a6.003 6.003 0 0 0 4.244-1.75739l3.244-3.24267A6.00264 6.00264 0 0 0 66 6.75732V0zM0 6h4v10h6V6h4V0H0z"
         ></path>
       </svg>
+      <nav>
+        <ul>
+          <li>home</li>
+          <li class="chevron">news <span class="material-icons">expand_more</span></li>
+          <li class="chevron">events <span class="material-icons">expand_more</span></li>
+          <li>programs</li>
+          <li>spaces</li>
+          <li class="chevron">more <span class="material-icons">expand_more</span></li>
+        </ul>
+      </nav>
+      <span class="material-icons mail">mail</span>
     </header>
     <main>
       <div class="tnw-title">
@@ -32,7 +42,7 @@
       </div>
       <section class="top-articles">
         <div class="slider">
-          <div class="article">
+          <div class="article spotify-g-item">
             <img
               src="https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fclubhouse_2021-06-16-145004_tafx.jpeg&signature=3a2ac7d07b7cf97704003cca7c2ce835"
               alt="spotify article"
@@ -42,7 +52,7 @@
               <h4 class="article-title">Just when you thought Clubhouse clones were over, Spotify launches Greenrom</h4>
             </div>
           </div>
-          <div class="article">
+          <div class="article space-g-item">
             <img
               src="https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fnasa.jpg&signature=39b5c80269211f311732b65b0816e584"
               alt="mars article"
@@ -62,7 +72,7 @@
               <button class="learn-more">learn more</button>
             </div>
           </div>
-          <div class="article">
+          <div class="article video-g-item">
             <img
               src="https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/airtag_gif_compressed.gif"
               alt="apple airtags article"
@@ -72,7 +82,7 @@
               <h4 class="article-title">Apple AirTags review: Beautiful design, but... why?</h4>
             </div>
           </div>
-          <div class="article">
+          <div class="article plugged-g-item">
             <img
               src="https://img-cdn.tnwcdn.com/image?fit=600%2C300&url=https%3A%2F%2Fs3.amazonaws.com%2Fevents.tnw%2Fhardfork-2018%2Fuploads%2Fvisuals%2Fidea.jpeg&signature=4e8f923c164264ee4f080070a0a9362a"
               alt="ikea article"
@@ -242,9 +252,7 @@
         <h2>Get the snarkiest newsletter in tech</h2>
         <p>Subscribe to our twice-weekly <span>Big Spam</span> or check out our <span>other newsletters</span>.</p>
         <div class="email-subscribe-container">
-          <!-- <span class="material-icons">mail</span> -->
           <input type="text" placeholder="Email">
-          <!-- <p class="subscribe">subscribe</p> -->
         </div>
         <ul class="social-media-icons">
             <li>

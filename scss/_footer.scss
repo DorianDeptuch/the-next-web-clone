@@ -46,6 +46,10 @@ footer {
         padding: 0.5rem 0;
         font-family: Graphik;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         &:first-child {
           color: white;
           font-weight: bold;
@@ -68,6 +72,30 @@ footer {
     span {
       color: white;
       font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    position: relative;
+    flex-wrap: wrap;
+
+    img {
+      height: 20%;
+    }
+    h2 {
+      height: 60%;
+      padding-bottom: 10rem;
+    }
+    .social-media-icons {
+      height: 20%;
+    }
+    .links {
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
+      width: 50%;
     }
   }
 }

@@ -12,18 +12,77 @@ header {
     padding-left: 1rem;
   }
 
+  nav,
+  .mail {
+    display: none;
+  }
+
   .material-icons {
-    // height: clamp(2rem, 2vw, 4rem);
-    // height: 2rem;
     font-size: 2rem;
-    // width: 8%;
   }
 
   svg {
     position: relative;
     top: 0.25rem;
-    // color: $border-color;
+    color: $border-color;
     height: 1.5rem;
-    // width: 8%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+
+    .apps {
+      display: none;
+    }
+
+    nav {
+      display: block;
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        font-family: Shentox;
+        list-style-type: none;
+        color: darken($font-color, 30%);
+
+        li {
+          align-self: center;
+          padding: 1rem;
+          text-transform: uppercase;
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .chevron {
+          transform: translateY(-0.5rem);
+
+          span {
+            transform: translateY(0.5rem);
+          }
+        }
+
+        span {
+          padding: 0 1rem;
+        }
+      }
+    }
+
+    .mail {
+      display: block;
+      color: darken($site-background, 30%);
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

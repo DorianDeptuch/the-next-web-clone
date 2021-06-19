@@ -23,6 +23,10 @@
     padding-left: 2rem;
     margin: 1rem 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &::before {
       position: absolute;
       left: 0;
@@ -38,5 +42,25 @@
 @media (min-width: 768px) {
   .popular-articles-today {
     padding: 3rem 7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popular-articles-today {
+    padding: 7rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    h2 {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 3rem;
+    }
+
+    .pop-article {
+      width: 15%;
+      margin: 0 1rem;
+    }
   }
 }
